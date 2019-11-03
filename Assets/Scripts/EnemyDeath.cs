@@ -32,8 +32,8 @@ public class EnemyDeath : MonoBehaviour
                 spriterenderer.color = new Color(1f, 1f, 1f, 1f);
             } else
             {
-                g -= (1f - currentHealth/maxHealth) * 0.4f;
-                b -= (1f - currentHealth / maxHealth) * 0.4f;
+                g = currentHealth/maxHealth;
+                b = currentHealth / maxHealth;
                 spriterenderer.color = new Color(r, g, b, a);
             }
             if(collision.gameObject.tag == "magicBolt")
