@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossController : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class BossController : MonoBehaviour
     private Rigidbody2D rigidbody;
     private float nextFire;
     private float fireRate;
+    public Image healthbar;
+    public GameObject healthbarobject;
 
 
     private void OnEnable()
@@ -55,6 +58,7 @@ public class BossController : MonoBehaviour
         if (collision.gameObject.tag == "magicBolt" || collision.gameObject.tag == "Special" || collision.gameObject.tag == "Pumpkin")
         {
             currentHealth -= 1f;
+            healthbar.fillAmount = currentHealth / maxHealth;
             if (currentHealth == 0f)
             {
                 this.gameObject.SetActive(false);
@@ -62,6 +66,7 @@ public class BossController : MonoBehaviour
                 trophy.SetActive(true);
                 pumpkins.SetActive(true);
                 currentHealth = maxHealth;
+                healthbarobject.SetActive(false);
             }
             if (collision.gameObject.tag == "magicBolt")
             {

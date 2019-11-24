@@ -23,5 +23,7 @@ public class Respawner : MonoBehaviour
         transform.position = startPos;
         transform.rotation = startRot;
         gameObject.SetActive(startActive);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<UpgradeManager>().speed = 1;
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<UpgradeManager>().jump = 1;
     }
 }

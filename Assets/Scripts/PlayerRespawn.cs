@@ -21,5 +21,11 @@ public class PlayerRespawn : Respawner
         base.respawn();
         movement.maxSpeed = maxSpeed;
         movement.jumpForce = jumpForce;
+        GameObject.
+                FindGameObjectWithTag("GameController").
+                    GetComponent<UpgradeManager>().jumpText.text = "Jump: 1";
+        GameObject.
+                FindGameObjectWithTag("GameController").
+                    GetComponent<UpgradeManager>().speedText.text = "Speed: 1";
     }
 }

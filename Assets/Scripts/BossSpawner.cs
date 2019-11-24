@@ -6,6 +6,7 @@ public class BossSpawner : MonoBehaviour
 {
 
     public GameObject boss;
+    public GameObject healthbar;
 
 
     void OnTriggerEnter2D(Collider2D other)
@@ -13,6 +14,7 @@ public class BossSpawner : MonoBehaviour
         if (other.tag == "Player")
         {
             boss.SetActive(true);
+            healthbar.SetActive(true);
 
         }
 

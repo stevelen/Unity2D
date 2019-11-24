@@ -15,6 +15,7 @@ public class MovementController : MonoBehaviour
     public LayerMask whatIsGround;
     public bool isGrounded = true;
     private Animator animator;
+    public GameObject bossHealthbar;
 
     public static bool facingRight = true;
 
@@ -74,6 +75,7 @@ public class MovementController : MonoBehaviour
                 .FindGameObjectWithTag("GameController")
                     .GetComponent<RespawnController>()
                         .respawn();
+            bossHealthbar.SetActive(false);
         }
 
         if (collision.gameObject.tag == "Trophy")
@@ -84,8 +86,10 @@ public class MovementController : MonoBehaviour
                 .FindGameObjectWithTag("GameController")
                     .GetComponent<RespawnController>()
                         .respawn();
+            bossHealthbar.SetActive(false);
         }
         
+
     }
 
     public void flip()

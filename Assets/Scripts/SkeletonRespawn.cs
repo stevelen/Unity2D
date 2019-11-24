@@ -22,5 +22,6 @@ public class SkeletonRespawn : Respawner
         enemyDeath.spriterenderer.color = new Color(1f, 1f, 1f, 1f);
         enemyDeath.g = 1f;
         enemyDeath.b = 1f;
+        enemyDeath.healthBar.fillAmount = 1;
     }
 }

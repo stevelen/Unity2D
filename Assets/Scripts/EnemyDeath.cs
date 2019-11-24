@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyDeath : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class EnemyDeath : MonoBehaviour
     private float a = 1f;
     public float currentHealth;
     public SpriteRenderer spriterenderer;
+
+    public Image healthBar = null;
 
 
     private void OnEnable()
@@ -29,12 +32,21 @@ public class EnemyDeath : MonoBehaviour
             {
                 this.gameObject.SetActive(false);
                 currentHealth = maxHealth;
+                if(healthBar != null)
+                {
+                    healthBar.fillAmount = currentHealth / maxHealth;
+                }
+                
                 spriterenderer.color = new Color(1f, 1f, 1f, 1f);
             } else
             {
                 g = currentHealth/maxHealth;
                 b = currentHealth / maxHealth;
                 spriterenderer.color = new Color(r, g, b, a);
+                if (healthBar != null)
+                {
+                    healthBar.fillAmount = currentHealth / maxHealth;
+                }
             }
             if(collision.gameObject.tag == "magicBolt")
             {

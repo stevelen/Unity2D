@@ -13,14 +13,17 @@ ScriptsOnlyBuild:
     - DragPlatform
     - EnemyDeath
     - MagicBolt
+    - MenuManager
     - MovementController
     - Parallaxing
     - PlayerRespawn
     - RespawnController
     - Respawner
+    - SkeletonAI
     - SkeletonRespawn
     - SpawnSkeletons
     - Tiling
+    - UpgradeManager
     - VerticalTiling
     Unity.Timeline.Editor.dll:
     - UnityEditor.Timeline.SequenceHierarchy
@@ -36,8 +39,63 @@ ScriptsOnlyBuild:
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Achievements.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9660}
+    - Class: 114
+      Script: {instanceID: 9822}
+    - Class: 114
+      Script: {instanceID: 9862}
+    - Class: 114
+      Script: {instanceID: 10248}
+    - Class: 114
+      Script: {instanceID: 10432}
+    - Class: 114
+      Script: {instanceID: 10606}
+    - Class: 114
+      Script: {instanceID: 11068}
+    - Class: 114
+      Script: {instanceID: 11432}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Main.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -73,11 +131,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 9660}
+    - Class: 114
       Script: {instanceID: 9742}
     - Class: 114
       Script: {instanceID: 9750}
     - Class: 114
       Script: {instanceID: 9772}
+    - Class: 114
+      Script: {instanceID: 9822}
+    - Class: 114
+      Script: {instanceID: 9862}
     - Class: 114
       Script: {instanceID: 10084}
     - Class: 114
@@ -85,42 +149,117 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10134}
     - Class: 114
-      Script: {instanceID: 10370}
+      Script: {instanceID: 10136}
     - Class: 114
-      Script: {instanceID: 10456}
+      Script: {instanceID: 10248}
     - Class: 114
-      Script: {instanceID: 10474}
+      Script: {instanceID: 10372}
     - Class: 114
-      Script: {instanceID: 10554}
+      Script: {instanceID: 10432}
     - Class: 114
-      Script: {instanceID: 10576}
+      Script: {instanceID: 10460}
     - Class: 114
-      Script: {instanceID: 10696}
+      Script: {instanceID: 10478}
     - Class: 114
-      Script: {instanceID: 10816}
+      Script: {instanceID: 10558}
     - Class: 114
-      Script: {instanceID: 10944}
+      Script: {instanceID: 10580}
     - Class: 114
-      Script: {instanceID: 11098}
+      Script: {instanceID: 10606}
     - Class: 114
-      Script: {instanceID: 11148}
+      Script: {instanceID: 10700}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 10820}
     - Class: 114
-      Script: {instanceID: 11324}
+      Script: {instanceID: 10948}
     - Class: 114
-      Script: {instanceID: 11364}
+      Script: {instanceID: 11068}
     - Class: 114
-      Script: {instanceID: 11472}
+      Script: {instanceID: 11102}
     - Class: 114
-      Script: {instanceID: 14456}
+      Script: {instanceID: 11152}
+    - Class: 114
+      Script: {instanceID: 11182}
+    - Class: 114
+      Script: {instanceID: 11282}
+    - Class: 114
+      Script: {instanceID: 11330}
+    - Class: 114
+      Script: {instanceID: 11352}
+    - Class: 114
+      Script: {instanceID: 11372}
+    - Class: 114
+      Script: {instanceID: 11432}
+    - Class: 114
+      Script: {instanceID: 11480}
     - Class: 115
       Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Title.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9660}
+    - Class: 114
+      Script: {instanceID: 9822}
+    - Class: 114
+      Script: {instanceID: 9862}
+    - Class: 114
+      Script: {instanceID: 10248}
+    - Class: 114
+      Script: {instanceID: 10432}
+    - Class: 114
+      Script: {instanceID: 10460}
+    - Class: 114
+      Script: {instanceID: 10606}
+    - Class: 114
+      Script: {instanceID: 11068}
+    - Class: 114
+      Script: {instanceID: 11432}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -167,7 +306,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 13314640aa3deab4390dd39ccc63ccee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossRespawner
@@ -299,6 +438,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: bf2d64d76b264f3f79cc1175cd2e7f75
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UpgradeManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -365,13 +510,19 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuManager
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 963038867df638a3a5378b57d1571390
+      Hash: 64b228a6c4ff3edd1c510537eef2e9d0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChangeCursor
@@ -431,7 +582,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 761caa25a0ae1b025ecc39106aaaea15
+      Hash: 33c73fa0ffaa0933dc91a54d1caa35fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyDeath
@@ -533,7 +684,7 @@ ScriptsOnlyBuild:
     className: CameraMovement
   - hash:
       serializedVersion: 2
-      Hash: e2620be90a10caa2a153e02741d1a00f
+      Hash: cf9d1bc46f01252a74de76b373d5222a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MovementController
@@ -551,7 +702,13 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: bc69ab14922420aa47de97b18843cbe1
+      Hash: ad86e03657224fa483ab3b6d44737441
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VerticalTiling
+  - hash:
+      serializedVersion: 2
+      Hash: fb55f6b747d64bd98dd169a091fdab41
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossSpawner
@@ -569,6 +726,12 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: 026492205c41a81780c5d05c08af54bf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SkeletonAI
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -581,7 +744,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 37b6e4a7ab4bff190514cf097aa3dc07
+      Hash: 9d1ab4afbc49ef5510ef0b6ffa3e6234
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossController
@@ -657,13 +820,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: ad86e03657224fa483ab3b6d44737441
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: VerticalTiling
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/Title.unity
+  - Assets/Scenes/Main.unity
+  - Assets/Scenes/Achievements.unity
   playerPath: C:/Users/Pisti/Desktop/2d/Project_Halloween.exe

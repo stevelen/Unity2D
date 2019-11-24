@@ -20,6 +20,10 @@ public class DestroyPumpkin : MonoBehaviour
         {
             gameObject.SetActive(false);
             player.GetComponent<MovementController>().maxSpeed += 1;
+            GameObject.
+                FindGameObjectWithTag("GameController").
+                    GetComponent<UpgradeManager>().
+                        addSpeed(1);
         }
         if(collision.gameObject.tag == "Enemy")
         {
@@ -29,6 +33,10 @@ public class DestroyPumpkin : MonoBehaviour
         {
             gameObject.SetActive(false);
             player.GetComponent<MovementController>().jumpForce += 1;
+            GameObject.
+                FindGameObjectWithTag("GameController").
+                    GetComponent<UpgradeManager>().
+                        addJump(1);
 
         }
     }
