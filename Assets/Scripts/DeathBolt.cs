@@ -15,6 +15,7 @@ public class DeathBolt : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         animator = gameObject.GetComponent<Animator>();
         animLength = GetAnimationClipLength(animator, 0);
+        GameObject.FindGameObjectWithTag("SoundManager").GetComponent<AudioManager>().PlaySound("EnemyBolt");
 
     }
 

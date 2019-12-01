@@ -45,10 +45,11 @@ public class MovementController : MonoBehaviour
         if (Input.GetButton("Jump") && isGrounded)
         {
             rigidbody.velocity = new Vector2(0, jumpForce);
+            GameObject.FindGameObjectWithTag("SoundManager").GetComponent<AudioManager>().PlaySound("Jump");
 
         }
 
-        
+
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, whatIsGround);
 
         animator.SetFloat("speed", rigidbody.velocity.magnitude);

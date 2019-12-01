@@ -5,11 +5,14 @@ using UnityEngine;
 public class RespawnController : MonoBehaviour
 {
     private List<Respawner> respawnableObjects;
+    public GameObject boss;
 
     // Start is called before the first frame update
     void Awake()
     {
         respawnableObjects = new List<Respawner>();
+        
+        
     }
 
     public void register(Respawner x)
@@ -23,5 +26,6 @@ public class RespawnController : MonoBehaviour
         {
             x.respawn();
         }
+        boss.SetActive(false);
     }
 }

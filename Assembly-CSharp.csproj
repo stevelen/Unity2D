@@ -62,6 +62,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\achiPopup.cs" />
+    <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\BatMovement.cs" />
     <Compile Include="Assets\Scripts\BossController.cs" />
     <Compile Include="Assets\Scripts\BossRespawner.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="Assets\Scripts\SkeletonAI.cs" />
     <Compile Include="Assets\Scripts\SkeletonRespawn.cs" />
     <Compile Include="Assets\Scripts\SpawnSkeletons.cs" />
+    <Compile Include="Assets\Scripts\SwapSprites.cs" />
     <Compile Include="Assets\Scripts\Tiling.cs" />
     <Compile Include="Assets\Scripts\UpgradeManager.cs" />
     <Compile Include="Assets\Scripts\VerticalTiling.cs" />

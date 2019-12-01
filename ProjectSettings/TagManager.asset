@@ -16,6 +16,7 @@ TagManager:
   - Confetti
   - HealthBar
   - BossHealth
+  - SoundManager
   layers:
   - Default
   - TransparentFX

@@ -83,6 +83,7 @@ public class MagicBolt : MonoBehaviour
         {
             gameObject.GetComponent<MovementController>().flip();
         }
+        GameObject.FindGameObjectWithTag("SoundManager").GetComponent<AudioManager>().PlaySound("MagicBoltSound");
 
     }
 
